@@ -79,21 +79,24 @@ h1 {
     background: #e9f6fc;
 }
 
-ul {
-    margin: 0;
-    padding-left: 22px;
+/* Skills in a straight horizontal line */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    margin: 10px 0 0 0;
+    justify-content: center;
 }
-
-ul.skills-list {
-    columns: 2;
-    margin-top: 12px;
-    margin-bottom: 0;
-    list-style: disc;
-}
-
-ul.skills-list li {
-    margin-bottom: 7px;
-    font-size: 1.08em;
+.skills-list li {
+    background: #1882a8;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 1.09em;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(30,106,120,0.06);
 }
 
 .project, .experience {
@@ -172,6 +175,10 @@ form button:hover {
     h1 { font-size: 2em; padding-bottom: 10px;}
     .tagline { font-size: 1em; }
     .section { padding: 14px 8px;}
-    ul.skills-list { columns: 1;}
     .profile-photo { width: 80px; height: 80px;}
+    .skills-list {
+        gap: 8px;
+        font-size: 0.95em;
+        padding: 0;
+    }
 }
