@@ -3,7 +3,6 @@ body {
     background: linear-gradient(120deg, #eaf6fb 0%, #f7fafc 100%);
     margin: 0;
     color: #213547;
-    transition: background 0.5s;
 }
 
 .container {
@@ -13,27 +12,22 @@ body {
     padding: 38px 46px;
     border-radius: 18px;
     box-shadow: 0 8px 40px rgba(30, 106, 120, 0.14);
-    transition: box-shadow 0.2s;
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px);}
-    to   { opacity: 1; transform: none;}
 }
 
 header {
     text-align: center;
     margin-bottom: 32px;
 }
+
 .profile-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 4px 16px #b7d9e7;
     margin-bottom: 18px;
-    object-fit: cover;
 }
+
 h1 {
     font-size: 2.7em;
     color: #1882a8;
@@ -41,14 +35,7 @@ h1 {
     margin: 0 0 18px 0;
     letter-spacing: 2px;
 }
-h2 {
-    font-size: 1.38em;
-    color: #247e7e;
-    margin-bottom: 12px;
-    margin-top: 0;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
+
 .tagline {
     color: #247e7e;
     font-size: 1.14em;
@@ -61,27 +48,32 @@ h2 {
     margin-bottom: 18px;
     letter-spacing: 1px;
 }
+
 .contact a {
     color: #1882a8;
     font-weight: 500;
     text-decoration: none;
     margin-right: 14px;
     transition: color 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
+
 .contact a:hover {
-    color: #247e7e;
+    color: #fff;
+    background: #1882a8;
     text-decoration: underline;
 }
 
 .section {
-    margin-bottom: 36px;
+    margin-bottom: 38px;
     padding: 32px 28px;
     background: #f2fbff;
     border-radius: 13px;
     box-shadow: 0 2px 12px rgba(30,106,120,0.09);
     transition: box-shadow 0.2s, background 0.2s;
-    animation: fadeIn 1.2s cubic-bezier(.38,1.06,.65,1.09);
 }
+
 .section:hover {
     box-shadow: 0 6px 24px rgba(30,106,120,0.14);
     background: #e9f6fc;
@@ -91,13 +83,21 @@ ul {
     margin: 0;
     padding-left: 22px;
 }
+
 ul.skills-list {
     columns: 2;
     margin-top: 12px;
     margin-bottom: 0;
+    list-style: disc;
 }
+
 ul.skills-list li {
     margin-bottom: 7px;
+    font-size: 1.08em;
+}
+
+.project, .experience {
+    margin-bottom: 26px;
 }
 
 .date {
@@ -127,28 +127,50 @@ a {
     text-decoration: none;
     transition: color 0.2s;
 }
+
 a:hover {
     color: #1882a8;
     text-decoration: underline;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    background: #eaf6fb;
+/* Contact Form Styling */
+form {
+    margin-top: 14px;
 }
-::-webkit-scrollbar-thumb {
-    background: #b7d9e7;
-    border-radius: 6px;
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #b7d9e7;
+    font-size: 1em;
+}
+
+form button {
+    background: #1882a8;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #247e7e;
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
     .container { padding: 20px 6px;}
 }
+
 @media (max-width: 700px) {
     .container { padding: 16px 2px;}
     h1 { font-size: 2em; padding-bottom: 10px;}
-    h2 { font-size: 1em;}
+    .tagline { font-size: 1em; }
     .section { padding: 14px 8px;}
     ul.skills-list { columns: 1;}
     .profile-photo { width: 80px; height: 80px;}
